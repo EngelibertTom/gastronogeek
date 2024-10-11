@@ -1,0 +1,30 @@
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding:4px;
+  position:absolute;
+  background-color: white;
+  width: 100%;
+}
+
+
+.list {
+  list-style:none;
+  display: flex;
+  align-items: center;
+  gap:3rem;
+}
+
+.link {
+  text-decoration: none;
+  color:#EB5F55;
+  font-weight: 700;
+
+  span {
+    transition: 0.1s;
+  }
+
+  span:hover {
+    border-bottom: 2px solid #EB5F55;
+  }
+}
+

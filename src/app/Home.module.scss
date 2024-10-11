@@ -1,0 +1,35 @@
+.containerHero {
+  background-color: #FCEE9B;
+  width: 100%;
+
+  .hero {
+    height: 100vh;
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .textHero {
+      color: #EB5F55;
+      width:350px;
+      font-weight: 350;
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .containerButton {
+      text-align: end;
+      margin-top:22px;
+
+    }
+  }
+}
+
+
