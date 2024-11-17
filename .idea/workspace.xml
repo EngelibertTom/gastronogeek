@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dc1be87-02c3-4e17-8aa0-b9684acc5749" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Home.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/[slug]/Recette.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/[slug]/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recettes/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/button/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/recettes/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +91,11 @@
       <workItem from="1727422909585" duration="6773000" />
       <workItem from="1727438483470" duration="467000" />
       <workItem from="1728025398640" duration="11568000" />
-      <workItem from="1728630342865" duration="12570000" />
+      <workItem from="1728630342865" duration="12974000" />
+      <workItem from="1728829393327" duration="5690000" />
+      <workItem from="1729858022576" duration="12844000" />
+      <workItem from="1731080362121" duration="1998000" />
+      <workItem from="1731657836194" duration="18000" />
     </task>
     <servers />
   </component>

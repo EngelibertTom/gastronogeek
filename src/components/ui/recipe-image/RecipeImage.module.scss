@@ -21,4 +21,14 @@
     z-index: 3;
     border-radius: 4px;
   }
+  @media (max-width: 768px) {
+    .background {
+      width: 250px;
+      height: 250px;
+    }
+
+    .recipeImage {
+      height: 250px;
+    }
+  }
 }

@@ -8,7 +8,7 @@ const RecipeImage = ({ img, bgColor }) => {
                 <img
                     className={styles.recipeImage}
                     src={img}
-                    alt="Image du plat" // Ajout d'un attribut alt
+                    alt="Image du plat"
                 />
             </div>
         </div>

@@ -1,8 +1,18 @@
 
+.containerSlider {
+  width:500px
+}
+
 .slick-slide {
   width: 500px;
   height: 500px;
   display: flex !important;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .containerSlider {
+    width:350px;
+  }
 }

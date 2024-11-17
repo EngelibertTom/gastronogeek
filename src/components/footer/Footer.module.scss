@@ -1,0 +1,38 @@
+.footer {
+  color: #EB5F55;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  div {
+    flex: 1 1 33%;
+    text-align: center;
+  }
+}
+
+.footerLinks,
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  p {
+    margin:0;
+  }
+}
+
+
+.footerLinks a,
+.footerContact a {
+  color: #EB5F55;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footerLinks a:hover,
+.footerContact a:hover {
+  text-decoration: underline;
+}
+

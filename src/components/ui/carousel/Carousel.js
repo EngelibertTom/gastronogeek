@@ -16,7 +16,7 @@ export default function Carousel({slides}) {
         slidesToScroll: 1
     };
     return (
-        <div style={{width: '500px'}}>
+        <div className="containerSlider">
             <Slider {...settings}>
                 {slides.map((slide, i) => (
 
