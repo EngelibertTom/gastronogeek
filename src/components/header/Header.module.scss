@@ -1,9 +1,11 @@
 .header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding:4px;
-  position:absolute;
-  background-color: white;
+  position:fixed;
+  z-index: 999;
+  background-color: var(--bgColor);
   width: 100%;
+  transition: all 0.2s ease-out;
+
 }
 
 

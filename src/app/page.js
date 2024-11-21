@@ -6,11 +6,11 @@ import Carousel from "@/components/ui/carousel/Carousel";
 import RecipeCard from "@/components/ui/recipe-card/RecipeCard";
 
 
+
 const pacifico = Pacifico({subsets: ['latin'], weight: ["400"]});
 const Home = () => {
-
     return (
-        <>
+        <div>
             <div className={styles.containerHero}>
                 <div className={styles.hero}>
                     <div>
@@ -65,7 +65,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 
 }

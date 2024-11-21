@@ -1,11 +1,14 @@
 'use client'
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import Link from "next/link";
 import styles from "./Recettes.module.scss";
 import {Pacifico} from 'next/font/google';
 import Button from "@/components/ui/button/Button";
+import gsap from "gsap";
+import {BounceLoader} from "react-spinners";
 
 const pacifico = Pacifico({subsets: ['latin'], weight: ["400"]});
+
 
 const fetchRecipes = async () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -19,15 +22,20 @@ const Recettes = () => {
     const [typeFilter, setTypeFilter] = useState("");
     const [licenseFilter, setLicenseFilter] = useState("");
     const [filteredRecipes, setFilteredRecipes] = useState([]);
+    const cardsRef = useRef([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const loadRecipes = async () => {
+            setIsLoading(true);
             const allRecipes = await fetchRecipes();
             setRecipes(allRecipes);
             setFilteredRecipes(allRecipes);
+            setIsLoading(false)
         };
         loadRecipes();
     }, []);
+
 
     useEffect(() => {
         const results = recipes.filter(recipe => {
@@ -40,6 +48,27 @@ const Recettes = () => {
         });
         setFilteredRecipes(results);
     }, [searchTerm, typeFilter, licenseFilter, recipes]);
+
+    useEffect(() => {
+        cardsRef.current.forEach((card, index) => {
+            gsap.fromTo(
+                card,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "top 60%",
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        });
+    }, [filteredRecipes]);
 
 
     const types = [...new Set(recipes.map(recipe => recipe.type))];
@@ -76,9 +105,11 @@ const Recettes = () => {
                         </select>
                     </div>
                 </div>
+
+                <BounceLoader color="#EB5F55" loading={isLoading} />
                 <ul className={styles.recipeGrid}>
-                    {filteredRecipes.map((recipe) => (
-                        <li key={recipe.slug} className={styles.recipeCard}>
+                    {filteredRecipes.map((recipe, index) => (
+                        <li key={recipe.slug} className={styles.recipeCard} ref={(el) => (cardsRef.current[index] = el)}>
                             <Link href={`/recettes/${recipe.slug}`}>
                                 <div className={styles.cardImage}>
                                     <img src={recipe.images[0] || "/placeholder.jpg"} alt={recipe.title}/>

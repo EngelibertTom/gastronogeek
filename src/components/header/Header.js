@@ -1,25 +1,39 @@
+'use client'
 import Link from "next/link";
 import styles from "./Header.module.scss";
+import TransitionLink from "@/utils/TransitionLink";
+import {useState} from "react";
 
 const Header = () => {
+
+    const [bgHeader, setBgHeader] = useState('transparent');
+
+    document.addEventListener("scroll", (e) => {
+        if(window.scrollY === 0) {
+            setBgHeader('transparent')
+        } else {
+            setBgHeader('white')
+        }
+    })
+
     return (
-        <header className={styles.header}>
+        <header className={styles.header} style={{ '--bgColor': bgHeader }}>
             <nav>
                 <ul className={styles.list}>
                     <li>
-                        <Link href="/">
-                            <img src="./assets/images/logo.png" alt="logo" />
-                        </Link>
+                        <TransitionLink url="/">
+                            <img src="/assets/images/logo.png" alt="logo" />
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/recettes">
+                        <TransitionLink className={styles.link} url="/recettes">
                             <span>Recettes</span>
-                        </Link>
+                        </TransitionLink>
                     </li>
                     <li>
-                        <Link className={styles.link} href="/contact">
+                        <TransitionLink className={styles.link} url="/contact">
                             <span>Contact</span>
-                        </Link>
+                        </TransitionLink>
                     </li>
                 </ul>
             </nav>

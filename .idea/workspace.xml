@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6dc1be87-02c3-4e17-8aa0-b9684acc5749" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/carousel/Carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-image/RecipeImage.module.scss" afterDir="false" />
-    </list>
+    <list default="true" id="6dc1be87-02c3-4e17-8aa0-b9684acc5749" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +81,7 @@
       <workItem from="1729858022576" duration="12844000" />
       <workItem from="1731080362121" duration="1998000" />
       <workItem from="1731657836194" duration="18000" />
+      <workItem from="1731765376821" duration="5532000" />
     </task>
     <servers />
   </component>
