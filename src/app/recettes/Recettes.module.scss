@@ -44,6 +44,12 @@
     gap: 1em;
     margin-bottom: 1em;
     justify-content: center;
+    align-items: center;
+
+    label {
+      color:#EB5F55;
+      font-weight: 700;
+    }
   }
 
   .filters select {
