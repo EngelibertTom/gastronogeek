@@ -71,6 +71,7 @@ console.log(refTransition.current)
                 {children}
             </div>
             <div ref={refTransition} className="transition">
+                <img src="/assets/images/logo-small.png" alt="logo" />
             </div>
         </>
     )

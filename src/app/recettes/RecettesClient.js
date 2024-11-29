@@ -65,7 +65,7 @@ const RecettesClient = ({recipes }) => {
                 />
 
                 <div className={styles.filters}>
-                    <label>Type de plat</label>
+                    <label>Type de plat :</label>
                     <select onChange={(e) => setTypeFilter(e.target.value)} value={typeFilter}>
                         <option value="">Tous les types</option>
                         {types.map((type) => (

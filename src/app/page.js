@@ -4,15 +4,49 @@ import Button from "@/components/ui/button/Button";
 import {Pacifico} from 'next/font/google';
 import Carousel from "@/components/ui/carousel/Carousel";
 import RecipeCard from "@/components/ui/recipe-card/RecipeCard";
+import {useEffect, useRef} from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 
 const pacifico = Pacifico({subsets: ['latin'], weight: ["400"]});
 const Home = () => {
+
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const sections = containerRef.current.querySelectorAll('div[data-animate]');
+
+        sections.forEach((section) => {
+            gsap.fromTo(
+                section,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 80%',
+                        end: 'bottom 20%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            );
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+
+
     return (
-        <div>
+        <div ref={containerRef}>
             <div className={styles.containerHero}>
-                <div className={styles.hero}>
+                <div className={styles.hero} data-animate>
                     <div>
                         <div className={styles.textHero}>
                             <h1 className={pacifico.className}>Delicious</h1><br/>
@@ -34,7 +68,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.containerAbout}>
-                <div className={styles.about}>
+                <div className={styles.about} data-animate>
                     <div>
                         <img src={"./assets/images/poulet-grille.png"} alt=""/>
                     </div>
@@ -53,7 +87,7 @@ const Home = () => {
                 </div>
             </div>
             <div className={styles.containerRecipes}>
-                <div className={styles.recipes}>
+                <div className={styles.recipes} data-animate>
                     <h2 className={pacifico.className}>Recettes à essayer</h2>
                     <div className={styles.bestRecipes}>
                         <RecipeCard bgImg={'./assets/images/poulet-grille.png'}/>
