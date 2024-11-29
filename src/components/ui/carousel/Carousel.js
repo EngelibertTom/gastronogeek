@@ -7,7 +7,6 @@ import RecipeImage from "@/components/ui/recipe-image/RecipeImage";
 import './Carousel.scss'
 
 export default function Carousel({slides}) {
-    console.log(slides);
     const settings = {
         dots: true,
         infinite: true,
@@ -25,8 +24,8 @@ export default function Carousel({slides}) {
                     </div>
 
                 ))}
-
             </Slider>
+            <div className="background"/>
         </div>
     );
 }

@@ -1,14 +1,32 @@
 
 .containerSlider {
-  width:500px
+  width:450px;
+  position: relative;
+}
+
+.background {
+  background-color: #EB5F55;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .slick-slide {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   display: flex !important;
   align-items: center;
   justify-content: center;
+}
+
+.slick-list {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 @media (max-width: 768px) {

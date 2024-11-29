@@ -4,15 +4,7 @@
   align-items: center;
   justify-content: center;
 
-  .background {
-    background-color: var(--bgColor);
-    width: 350px;
-    height: 350px;
-    position: absolute;
-    rotate:45deg;
-    z-index: 1;
-    border-radius: 8px;
-  }
+
 
   .recipeImage {
     position:relative;
