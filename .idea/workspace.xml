@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dc1be87-02c3-4e17-8aa0-b9684acc5749" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/contexts/RecipesContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/Recettes.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/RecettesClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/RecettesClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/[slug]/Recette.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/[slug]/Recette.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/[slug]/RecetteClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recettes/[slug]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recettes/[slug]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button/Button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/recipe-card/RecipeCard.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +89,7 @@
       <workItem from="1731765376821" duration="5532000" />
       <workItem from="1732176617045" duration="20048000" />
       <workItem from="1732885516606" duration="5407000" />
-      <workItem from="1733475625822" duration="10638000" />
+      <workItem from="1733475625822" duration="16076000" />
     </task>
     <servers />
   </component>

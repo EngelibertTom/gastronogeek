@@ -11,13 +11,16 @@ const Header = () => {
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const recipes = useRecipes();
 
-    document.addEventListener("scroll", () => {
-        if (window.scrollY === 0) {
-            setBgHeader('transparent');
-        } else {
-            setBgHeader('white');
-        }
-    });
+
+    if (typeof document !== 'undefined') {
+        document.addEventListener("scroll", () => {
+            if (window.scrollY === 0) {
+                setBgHeader('transparent');
+            } else {
+                setBgHeader('white');
+            }
+        });
+    }
 
 
     const handleSearchChange = (event) => {
