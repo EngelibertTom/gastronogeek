@@ -140,5 +140,17 @@
        color: #333;
      }
    }
+
+
+   .recipeGrid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center; /* Centre les éléments horizontalement */
+
+     list-style: none;
+     padding: 0;
+   }
+
  }
 }

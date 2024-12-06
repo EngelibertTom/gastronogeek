@@ -1,12 +1,13 @@
-
 import styles from './Recette.module.scss';
-import { Pacifico } from 'next/font/google';
+import {Pacifico} from 'next/font/google';
 
-const pacifico = Pacifico({ subsets: ['latin'], weight: ["400"] });
+const pacifico = Pacifico({subsets: ['latin'], weight: ["400"]});
 
 const fetchRecipes = async () => {
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    const response = await fetch('https://api-gastronogeek.vercel.app/api/recipes/');
+    const response = await fetch('https://api-gastronogeek.vercel.app/api/recipes/', { cache: 'no-store' });
+    if (!response.ok) {
+        throw new Error("Failed to fetch recipes");
+    }
     return response.json();
 };
 
@@ -23,11 +24,16 @@ const getRecipe = async (slug) => {
 };
 
 
-
 import AddIngredientsClient from "@/components/ui/add-ingredients/AddIngredients";
+import RecipeCard from "@/components/ui/recipe-card/RecipeCard";
 
-export default async function Recette({ params }) {
+export default async function Recette({params}) {
     const recipe = await getRecipe(params.slug);
+    const allRecipes = await fetchRecipes();
+
+    const recommendedRecipes = allRecipes
+        .filter((r) => r.category === recipe.category && r.slug !== params.slug)
+        .slice(0, 3);
 
     return (
         <div className={styles.containerRecipe}>
@@ -67,7 +73,7 @@ export default async function Recette({ params }) {
 
                 {/* Étapes */}
                 <div className={styles.steps}>
-                <h2 className={pacifico.className}>Préparation</h2>
+                    <h2 className={pacifico.className}>Préparation</h2>
                     <ol>
                         {recipe.steps.map((step, index) => (
                             <li key={index}>{step}</li>
@@ -80,7 +86,18 @@ export default async function Recette({ params }) {
                     <h2 className={pacifico.className}>Dressage</h2>
                     <p>{recipe.dressing}</p>
                 </div>
+
+                <div className={styles.ingredients}>
+                    <h2 className={pacifico.className}>Recettes similaires</h2>
+
+                    <ul className={styles.recipeGrid}>
+                        {recommendedRecipes.map((rec, index) => (
+                            <RecipeCard key={index} recipe={rec} index={index} cardsRef={null} />
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
-    );
+    )
+        ;
 }

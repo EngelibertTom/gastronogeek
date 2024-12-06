@@ -4,9 +4,10 @@ import Button from "@/components/ui/button/Button";
 import {Pacifico} from 'next/font/google';
 import Carousel from "@/components/ui/carousel/Carousel";
 import RecipeCard from "@/components/ui/recipe-card/RecipeCard";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {useRecipes} from "@/contexts/RecipesContext";
 
 
 
@@ -14,6 +15,17 @@ const pacifico = Pacifico({subsets: ['latin'], weight: ["400"]});
 const Home = () => {
 
     const containerRef = useRef(null);
+    const { recipes } =  useRecipes();
+    const [randomRecipes, setRandomRecipes] = useState([]);
+
+    useEffect(() => {
+        if (recipes.length > 0) {
+            const shuffledRecipes = [...recipes].sort(() => Math.random() - 0.5);
+            const selectedRecipes = shuffledRecipes.slice(0, 3);
+            setRandomRecipes(selectedRecipes);
+        }
+    }, [recipes]);
+
 
     useEffect(() => {
         const sections = containerRef.current.querySelectorAll('div[data-animate]');
@@ -89,11 +101,11 @@ const Home = () => {
             <div className={styles.containerRecipes}>
                 <div className={styles.recipes} data-animate>
                     <h2 className={pacifico.className}>Recettes à essayer</h2>
-                    <div className={styles.bestRecipes}>
-                        <RecipeCard bgImg={'./assets/images/poulet-grille.png'}/>
-                        <RecipeCard bgImg={'./assets/images/poulet-grille.png'}/>
-                        <RecipeCard bgImg={'./assets/images/poulet-grille.png'}/>
-                    </div>
+                    <ul className={styles.recipeGrid}>
+                        {randomRecipes.map((recipe, index) => (
+                            <RecipeCard key={index} recipe={recipe} />
+                        ))}
+                    </ul>
                     <div className={styles.button}>
                     <Button color={"#EB5F55"} text={"Voir toutes les recettes"} link={"/recettes"}/>
                     </div>

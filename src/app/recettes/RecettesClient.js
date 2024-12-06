@@ -3,9 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { BounceLoader } from "react-spinners";
-import Link from "next/link";
-import Button from "@/components/ui/button/Button";
 import styles from './Recettes.module.scss'
+import RecipeCard from "@/components/ui/recipe-card/RecipeCard";
 
 const RecettesClient = ({recipes }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -86,17 +85,7 @@ const RecettesClient = ({recipes }) => {
             <BounceLoader color="#EB5F55" loading={loading} />
             <ul className={styles.recipeGrid}>
                 {filteredRecipes.map((recipe, index) => (
-                    <li key={recipe.slug} className={styles.recipeCard} ref={(el) => (cardsRef.current[index] = el)}>
-                        <Link href={`/recettes/${recipe.slug}`}>
-                            <div className={styles.cardImage}>
-                                <img src={recipe.images[0] || "/placeholder.jpg"} alt={recipe.title} />
-                            </div>
-                            <div className={styles.cardContent}>
-                                <h2>{recipe.title}</h2>
-                                <Button color={"#EB5F55"} text={"Voir la recette"} link={`/recettes/${recipe.slug}`} />
-                            </div>
-                        </Link>
-                    </li>
+                    <RecipeCard key={index} recipe={recipe} cardsRef={cardsRef}/>
                 ))}
             </ul>
         </>

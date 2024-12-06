@@ -125,18 +125,17 @@
     align-items: center;
 
     h2 {
-      position: absolute;
-      top: 20px;
       color: #B9645F;
       font-size: 28px;
     }
 
-    .bestRecipes {
+    .recipeGrid {
       display: flex;
-      align-items: center;
-      justify-content: space-evenly;
       flex-wrap: wrap;
-      margin:auto;
+      gap: 20px;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
     }
 
     .button {
@@ -144,6 +143,7 @@
       bottom:30px;
     }
   }
+
 }
 
 

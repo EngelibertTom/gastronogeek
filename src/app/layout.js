@@ -4,6 +4,7 @@ import './globals.css';
 import Footer from "@/components/footer/Footer";
 import GSAPWrapper from "@/components/animations/GSAPWrapper";
 import PageTransition from '@/utils/PageTransition'
+import {RecipesProvider} from "@/contexts/RecipesContext";
 
 
 const montserrat = Montserrat({subsets: ['latin'], weight: ["400", "700"]});
@@ -20,11 +21,13 @@ export default function RootLayout({children}) {
         <body className={montserrat.className}>
         <PageTransition>
             <GSAPWrapper>
+                <RecipesProvider>
                 <Header/>
                 <main>
                     {children}
                 </main>
                 <Footer/>
+                </RecipesProvider>
             </GSAPWrapper>
         </PageTransition>
         </body>
