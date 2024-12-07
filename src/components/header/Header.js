@@ -24,6 +24,7 @@ const Header = () => {
 
 
     const handleSearchChange = (event) => {
+
         const query = event.target.value;
         setSearchQuery(query);
 
